@@ -4,6 +4,13 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    // constructor and methods up in here
+    public string PastryType { get; set; }
+    public int PastryQuantity { get; set; }
+
+    public Pastry (string pastryType, int pastryQuantity)
+    {
+      PastryType = pastryType;
+      PastryQuantity = pastryQuantity;
+    }
   }
 }
