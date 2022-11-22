@@ -45,5 +45,20 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(addPastryType, result);
     }
+
+    [TestMethod]
+    public void GetPastryAmount_ReturnPastryQuantity_Int()
+    {
+      //Arrange
+      string pastryType = "danish";
+      int pastryQuantity = 3;
+      Pastry pastryOrder = new Pastry(pastryType, pastryQuantity);
+
+      //Act
+      int result = pastryOrder.PastryQuantity;
+
+      //Assert
+      Assert.AreEqual(pastryQuantity, result);
+    }
   }
 }
