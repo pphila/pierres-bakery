@@ -67,14 +67,14 @@ namespace Bakery.Tests
     {
       //Arrange
       string breadType = "baguette";
-      int breadQuantity = 5;
+      int breadQuantity = 7;
       Bread breadOrder = new Bread(breadType, breadQuantity);
 
       //Act
       int result = breadOrder.CalculatedBreadCost(breadQuantity);
 
       //Assert
-      Assert.AreEqual(20, result);
+      Assert.AreEqual(25, result);
     }
   }
 }

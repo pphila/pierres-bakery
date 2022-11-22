@@ -19,9 +19,7 @@ namespace Bakery.Models
       
       if(breadQuantity >= 3)
       {
-        int qauntityCheck = breadQuantity / 3;
-        breadTotal += 10 * qauntityCheck;
-        breadQuantity -= (qauntityCheck * 3);
+        breadTotal = (breadQuantity * 5) - (int)Math.Floor((decimal)(breadQuantity / 3) * 5);  
       }
       else
       {
