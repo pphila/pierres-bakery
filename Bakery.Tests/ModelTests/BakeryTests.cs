@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
+using System;
 
 namespace Bakery.Tests
 {
@@ -44,6 +45,21 @@ namespace Bakery.Tests
 
       //Assert
       Assert.AreEqual(addBreadType, result);
+    }
+
+    [TestMethod]
+    public void GetAmountOfBread_returnBreadQuantity_Int()
+    {
+      //Arrange
+      string breadType = "baguette";
+      int breadQuantity = 3;
+      Bread breadOrder = new Bread(breadType, breadQuantity);
+
+      //Act
+      int result = breadOrder.BreadQuantity;
+
+      //Assert
+      Assert.AreEqual(breadQuantity, result);
     }
   }
 }
