@@ -28,5 +28,22 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(breadType, result);
     }
+
+    [TestMethod]
+    public void SetBreadType_String()
+    {
+      //Arrange
+      string breadType = "rye";
+      int breadQuantity = 3;
+      Bread breadOrder = new Bread(breadType, breadQuantity);
+
+      //Act
+      string addBreadType = "shokupan";
+      breadOrder.BreadType = addBreadType;
+      string result = breadOrder.BreadType;
+
+      //Assert
+      Assert.AreEqual(addBreadType, result);
+    }
   }
 }
